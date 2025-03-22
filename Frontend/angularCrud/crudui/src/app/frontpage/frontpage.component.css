@@ -1,0 +1,41 @@
+/* Front Page Styling */
+.container-fluid {
+    background-color: #F5DEB3; /* Light yellow background */
+  }
+  
+  /* Title Section */
+  .text-center h1 {
+    color: #F5DEB3; /* Light yellow color for title */
+    background-color: #8B4513; /* Brown background for title section */
+    padding: 5px;
+    font-weight: bold;
+  }
+  
+  /* College Information Section */
+  .text-center img {
+    max-width: 150px;
+    margin-bottom: 20px;
+  }
+  
+  .text-center h2 {
+    color: #8B4513; /* Brown color for heading */
+  }
+  
+  .text-center p {
+    font-size: 1.2rem;
+    color: #8B4513; /* Brown color for text */
+  }
+  
+  /* Footer */
+  footer {
+    background-color: #8B4513; /* Brown background for footer */
+    color: #F5DEB3; /* Light yellow text for footer */
+    padding: 20px;
+    text-align: center;
+  }
+  
+  /* Styling for the entire page */
+  .bg-light {
+    background-color: #F5DEB3; /* Light yellow background for the whole page */
+  }
+  

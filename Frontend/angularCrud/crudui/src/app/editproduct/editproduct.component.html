@@ -1,0 +1,85 @@
+<div class="container mt-5">
+  <h2 class="text-center mb-4 text-primary">Update Complaint</h2>
+
+  <form #adduserform="ngForm" (ngSubmit)="updateProductformsubmit()">
+
+   <!-- Complaint Category Dropdown -->
+   <div class="form-group">
+    <label for="complainCategory" class="font-weight-bold">Complain Category:</label>
+    <select class="form-control" id="complainCategory" required [(ngModel)]="complaint.complainSubject" name="complainCategory">
+      <option value="Electrical">Electrical</option>
+      <option value="Plumbing">Plumbing</option>
+      <option value="Carpentry">Carpentry</option>
+      <option value="Civil/Structural">Civil/Structural</option>
+      <option value="Housekeeping and Cleaning">Housekeeping and Cleaning</option>
+      <option value="IT and Network">IT and Network</option>
+      <option value="Painting and Aesthetics">Painting and Aesthetics</option>
+      <option value="Equipment Maintenance">Equipment Maintenance</option>
+    </select>
+  </div>
+
+
+    <div class="form-group">
+      <label for="complainDescription" class="font-weight-bold">Complain Description:</label>
+      <textarea class="form-control" id="complainDescription" required [(ngModel)]="complaint.complainDescription" name="complainDescription"></textarea>
+    </div>
+
+    <div class="form-group">
+      <label for="roleOfComplainer" class="font-weight-bold">Role of Complainer:</label>
+      <input type="text" class="form-control" id="roleOfComplainer" required [(ngModel)]="complaint.roleOfComplainer" name="roleOfComplainer">
+    </div>
+
+    <div class="form-group">
+      <label for="dept" class="font-weight-bold">Department:</label>
+      <input type="text" class="form-control" id="dept" required [(ngModel)]="complaint.dept" name="dept">
+    </div>
+
+    <div class="form-group">
+      <label for="roomNo" class="font-weight-bold">Room Number:</label>
+      <input type="number" class="form-control" id="roomNo" required [(ngModel)]="complaint.roomNo" name="roomNo">
+    </div>
+
+    <div class="form-group">
+      <label for="floorNo" class="font-weight-bold">Floor Number:</label>
+      <input type="number" class="form-control" id="floorNo" required [(ngModel)]="complaint.floorNo" name="floorNo">
+    </div>
+
+    <div class="form-group">
+      <label for="building" class="font-weight-bold">Building:</label>
+      <input type="text" class="form-control" id="building" required [(ngModel)]="complaint.building" name="building">
+    </div>
+
+    <div class="form-group">
+      <label for="imageOfSubject" class="font-weight-bold">Image of Subject:</label>
+      <input type="text" class="form-control" id="imageOfSubject" [(ngModel)]="complaint.imageOfSubject" name="imageOfSubject">
+    </div>
+
+    <div class="form-group">
+      <label for="email" class="font-weight-bold">Email:</label>
+      <input type="email" class="form-control" id="email" required [(ngModel)]="complaint.email" name="email">
+    </div>
+
+    <!-- Priority Toggle -->
+    <div class="form-group">
+      <label class="font-weight-bold">Priority:</label>
+      <label class="switch">
+        <input 
+          type="checkbox" 
+          [(ngModel)]="isHighPriority" 
+          name="priority" 
+          (change)="togglePriority()">
+        <span class="slider round"></span>
+      </label>
+      <span class="ml-2">{{ isHighPriority ? 'High' : 'Low' }}</span>
+    </div>
+    <div class="text-center mt-4">
+      <button type="submit" class="btn btn-success glowing-button update-button">Update</button>&nbsp;&nbsp;&nbsp;&nbsp;
+      <button type="button" class="btn btn-primary glowing-button back-button" (click)="gotolist()">BACK</button>
+    </div>
+  </form>
+</div>
+
+<footer class="bg-dark text-white py-3 text-center">
+  <p class="mb-0">&copy; 2025 VJTI Mumbai - Complaint Management System</p>
+  <p class="mb-0">Developed as part of an academic project by VJTI students.</p>
+</footer>

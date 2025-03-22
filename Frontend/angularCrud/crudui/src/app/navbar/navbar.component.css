@@ -1,0 +1,80 @@
+/* Navbar Styling */
+.navbar {
+  background: linear-gradient(135deg, #8B4513, #F5DEB3); /* Brown and Light Yellow gradient */
+  padding: 15px 30px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-brand {
+  display: flex;
+  align-items: center;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #fff; /* White text for brand */
+  text-transform: uppercase;
+  transition: color 0.3s ease;
+}
+
+.navbar-brand img {
+  margin-right: 10px;
+}
+
+.navbar-brand:hover {
+  color: #D2B48C; /* Light brown color when hovered */
+}
+
+.navbar-nav {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.navbar-nav .nav-link {
+  color: #fff; /* White text for links */
+  font-size: 1rem;
+  font-weight: 600;
+  padding: 8px 15px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.navbar-nav .nav-link:hover {
+  background-color: rgba(255, 255, 255, 0.2); /* Light background on hover */
+  color: #8B4513; /* Brown color on hover */
+}
+
+.navbar-nav .logout-btn {
+  padding: 5px 15px;
+  font-size: 0.9rem;
+  border: none;
+  transition: background-color 0.3s ease;
+}
+
+.navbar-nav .logout-btn:hover {
+  background-color: #c82333;
+}
+
+/* Responsive Toggler */
+.navbar-toggler {
+  border: none;
+}
+
+.navbar-toggler-icon {
+  background-image: url("data:image/svg+xml;charset=UTF8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3E%3Cpath stroke='rgba(255, 255, 255, 0.8)' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+}
+
+/* Adjustments for mobile view */
+@media (max-width: 768px) {
+  .navbar-brand span {
+    display: none; /* Hide text to save space */
+  }
+
+  .navbar-nav {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .navbar-nav .nav-link {
+    text-align: center;
+  }
+}

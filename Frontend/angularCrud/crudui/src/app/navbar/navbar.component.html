@@ -1,0 +1,52 @@
+<nav class="navbar navbar-expand-lg">
+  <div class="container-fluid">
+    <!-- Left-aligned logo and text -->
+    <a class="navbar-brand d-flex align-items-center" routerLink="">
+      <img 
+        src="assets/vjti-college-logo.png" 
+        alt="VJTI Logo" 
+        width="50" 
+        height="50" 
+        class="d-inline-block align-text-top me-2"
+      />
+      <span class="fs-5 fw-bold">Complaint Management System</span>
+    </a>
+
+    <!-- Toggler for mobile view -->
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <!-- Right-aligned navigation links -->
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item">
+          <a class="nav-link" *ngIf="showProducts" routerLink="/productlist">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" *ngIf="showAdmin" routerLink="/dashboard">Dashboard</a>
+        </li>
+        <!-- Tabs for complaints based on status -->
+        <li class="nav-item">
+          <a class="nav-link" *ngIf="showProducts" routerLink="/logged">Logged</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" *ngIf="showProducts" routerLink="/assigned">In Progress</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" *ngIf="showProducts" routerLink="/done">Done</a>
+        </li>
+        <!-- Login, Register, Logout -->
+        <li class="nav-item">
+          <a class="nav-link" *ngIf="!showProducts" routerLink="/login">Login</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" *ngIf="!showProducts" routerLink="/register">Register</a>
+        </li>
+        <li class="nav-item">
+          <button class="btn btn-danger nav-link text-light logout-btn" *ngIf="showProducts" (click)="onLogout()">Logout</button>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>

@@ -1,0 +1,112 @@
+<div class="container-fluid bg-light">
+    <!-- Application Title -->
+    <div class="text-center py-4" style="background-color: #8B4513; color: #F5DEB3;">
+      <h1 class="display-4" style="font-weight: bold;">Complaint Management System</h1>
+    </div>
+  
+    <!-- College Logo and Information -->
+    <div class="text-center my-4">
+      <img
+        src="assets/vjti-college-logo.png"
+        alt="VJTI Logo"
+        class="img-fluid"
+        style="max-width: 150px; margin-bottom: 10px;"
+      />
+      <h2 class="font-weight-bold mt-4">Veermata Jijabai Technological Institute (VJTI), Mumbai</h2>
+      <p style="font-size: 1.2rem;">
+        Established in 1887 as the Victoria Jubilee Technical Institute, VJTI has been a trailblazer in India's
+        engineering education, research, and training landscape. VJTI has played a crucial role in fostering
+        industrial development across India and has contributed to the establishment of prestigious institutions like
+        the IITs and RECs.
+      </p>
+    </div>
+  
+    <!-- Vision and Mission Banners -->
+    <div class="row my-4 mx-3">
+      <div class="col-md-6 mb-3">
+        <div class="card shadow-sm border-0" style="background-color: #8B4513; color: #F5DEB3;">
+          <div class="card-body">
+            <h4 class="font-weight-bold text-uppercase">Vision</h4>
+            <p>
+              To establish global leadership in the field of Technology and develop competent human resources for
+              providing service to society.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6 mb-3">
+        <div class="card shadow-sm border-0" style="background-color: #8B4513; color: #F5DEB3;">
+          <div class="card-body">
+            <h4 class="font-weight-bold text-uppercase">Mission</h4>
+            <p>
+              To provide students with comprehensive knowledge of engineering principles, foster creativity, and
+              contribute to National and International development.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+    <!-- Metrics and Graph -->
+    <div class="row my-4 mx-3">
+      <!-- Left Side: Metrics -->
+      <div class="col-md-8">
+        <div class="row">
+          <div class="col-md-6 mb-3">
+            <div class="card shadow-sm border-0" style="background-color: #D2B48C;">
+              <div class="card-body text-center">
+                <h5 class="card-title font-weight-bold">Logged Complaints</h5>
+                <p class="card-text display-4">{{ dashboardMetrics.loggedCount }}</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 mb-3">
+            <div class="card shadow-sm border-0" style="background-color: #D2B48C;">
+              <div class="card-body text-center">
+                <h5 class="card-title font-weight-bold">In Progress</h5>
+                <p class="card-text display-4">{{ dashboardMetrics.inProgressCount }}</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 mb-3">
+            <div class="card shadow-sm border-0" style="background-color: #D2B48C;">
+              <div class="card-body text-center">
+                <h5 class="card-title font-weight-bold">Resolved Complaints</h5>
+                <p class="card-text display-4">{{ dashboardMetrics.doneCount }}</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 mb-3">
+            <div class="card shadow-sm border-0" style="background-color: #D2B48C;">
+              <div class="card-body text-center">
+                <h5 class="card-title font-weight-bold">This Week</h5>
+                <p class="card-text display-4">{{ dashboardMetrics.thisWeekComplaints }}</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 mb-3">
+            <div class="card shadow-sm border-0" style="background-color: #D2B48C;">
+              <div class="card-body text-center">
+                <h5 class="card-title font-weight-bold">Resolved After Week</h5>
+                <p class="card-text display-4">{{ dashboardMetrics.resolvedAfterWeek }}</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+  
+      <!-- Right Side: Graph -->
+      <div class="col-md-4 text-center">
+        <h5 class="mb-4 font-weight-bold">Complaints Status Overview</h5>
+        <div>
+          <canvas id="complaintsBarChart" class="shadow-sm" style="max-width: 100%; max-height: 300px;"></canvas>
+        </div>
+      </div>
+    </div>
+  
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-3 text-center">
+      <p class="mb-0">&copy; {{ currentYear }} VJTI Mumbai - Complaint Management System</p>
+      <p class="mb-0">Developed as part of an academic project by VJTI students.</p>
+    </footer>
+  </div>

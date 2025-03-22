@@ -1,0 +1,51 @@
+<div class="container mt-4">
+    <!-- Heading -->
+    <h2 class="text-center">Logged Complaint Data</h2>
+
+    <!-- Table to Display Complaints -->
+    <table class="table table-bordered table-striped">
+      <thead class="thead-dark">
+        <tr>
+          <th scope="col">Complain ID</th>
+          <th scope="col">Subject</th>
+          <th scope="col">Description</th>
+          <th scope="col">Role of Complainer</th>
+          <th scope="col">Department</th>
+          <th scope="col">Room No.</th>
+          <th scope="col">Floor No.</th>
+          <th scope="col">Building</th>
+          <th scope="col">Image of Subject</th>
+          <th scope="col">Email</th>
+          <th scope="col">Created Date</th>
+        </tr>
+      </thead>
+      <tbody>
+        <!-- Loop through the complaints array and display each complaint in a table row -->
+        <tr *ngFor="let complaint of complaints">
+          <td>
+            <div [ngClass]="{'high-priority-box': complaint.priority === 'High'}">
+              <div class="complain-id-box">
+                {{ complaint.complainId }}
+              </div>
+              <div *ngIf="complaint.priority === 'High'" class="priority-label">High Priority</div>
+            </div>
+          </td>
+          <td>{{ complaint.complainSubject }}</td>
+          <td>{{ complaint.complainDescription }}</td>
+          <td>{{ complaint.roleOfComplainer }}</td>
+          <td>{{ complaint.dept }}</td>
+          <td>{{ complaint.roomNo }}</td>
+          <td>{{ complaint.floorNo }}</td>
+          <td>{{ complaint.building }}</td>
+          <td><img [src]="complaint.imageOfSubject" alt="Complaint Image" width="50" height="50"></td>
+          <td>{{ complaint.email }}</td>
+          <td>{{ complaint.createdDate | date:'short' }}</td>
+        </tr>
+      </tbody>
+    </table>
+</div>
+
+<footer class="bg-dark text-white py-3 text-center">
+    <p class="mb-0">&copy; 2025 VJTI Mumbai - Complaint Management System</p>
+    <p class="mb-0">Developed as part of an academic project by VJTI students.</p>
+  </footer>

@@ -1,0 +1,69 @@
+/* Card Styling */
+.card {
+  border-radius: 10px;
+  border: none;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  background-color: #F5DEB3; /* Light yellow background for the card */
+}
+
+.card-body {
+  padding: 30px;
+  background-color: #F5DEB3; /* Light yellow background */
+}
+
+/* Form Styling */
+.form-label {
+  font-size: 1.1rem;
+  color: #8B4513; /* Brown color for labels */
+}
+
+.form-control {
+  padding: 10px;
+  font-size: 1rem;
+  border-radius: 5px;
+  border: 2px solid #8B4513; /* Brown border for input fields */
+}
+
+/* Button Styling */
+.btn {
+  padding: 10px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #6E3B16; /* Darker brown for button hover */
+}
+
+/* Text Link Styling */
+a {
+  color: #8B4513;
+}
+
+a:hover {
+  color: #6E3B16; /* Darker brown on hover */
+}
+
+
+/* Logo Styling */
+.text-center img {
+  max-width: 100px;
+  margin-bottom: 20px;
+}
+
+/* Responsive Styling for Smaller Screens */
+@media (max-width: 768px) {
+  .card-body {
+    padding: 20px;
+  }
+
+  .form-control {
+    font-size: 0.95rem;
+  }
+
+  .btn {
+    font-size: 1rem;
+  }
+}

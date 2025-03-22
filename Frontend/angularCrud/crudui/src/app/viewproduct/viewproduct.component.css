@@ -1,0 +1,159 @@
+/* General container styling */
+.container {
+    margin-top: 30px;
+    padding: 20px;
+  }
+  
+  /* Heading styling */
+  h2 {
+    font-size: 36px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+    color: #4e4e4e;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 20px;
+    background: linear-gradient(to right, #6610f2, #f86c42);
+    -webkit-background-clip: text;
+    color: transparent;
+  }
+  
+  /* Product details section */
+  .product-container {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .product-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+  }
+  
+  /* Left side (Image) */
+  .product-image {
+    flex: 1;
+    max-width: 45%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .product-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Right side (Details) */
+  .product-details {
+    flex: 1;
+    max-width: 50%;
+    padding-left: 20px;
+  }
+  
+  .product-details .form-group {
+    margin-bottom: 20px;
+  }
+  
+  .product-details label {
+    font-size: 18px;
+    font-weight: 600;
+    color: #333;
+  }
+  
+  .product-details p {
+    font-size: 16px;
+    color: #555;
+  }
+  
+  /* Button styling */
+  button {
+    padding: 12px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Back button styling */
+  .back-button {
+    background-color: #007bff;
+  }
+  
+  .back-button:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+    box-shadow: 0px 8px 12px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Button focus styling */
+  button:focus, input:focus, textarea:focus {
+    outline: none;
+    box-shadow: none;
+  }
+  
+  button:focus-visible, input:focus-visible, textarea:focus-visible {
+    outline: 2px solid #6610f2; /* Custom outline for better accessibility */
+  }
+  
+  /* Optional glow effect for buttons */
+  button:hover {
+    text-shadow: 0 0 8px rgba(255, 255, 255, 0.5);
+  }
+  
+  /* Responsive design adjustments */
+  @media (max-width: 768px) {
+    .product-wrapper {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .product-image {
+      max-width: 80%;
+    }
+  
+    .product-details {
+      max-width: 80%;
+    }
+  }
+  
+  /* Priority Display Styles */
+.priority-display {
+  position: absolute;
+  top: 140px;
+  right: 250px;
+  padding: 10px 20px;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #fff;
+  text-align: center;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.priority-display.high-priority {
+  background-color: #e74c3c; /* Red for high priority */
+  animation: glow 1.5s infinite;
+}
+
+.priority-display.low-priority {
+  background-color: #3498db; /* Blue for low priority */
+}
+
+@keyframes glow {
+  0%, 100% {
+    box-shadow: 0 0 10px #e74c3c, 0 0 20px #e74c3c;
+  }
+  50% {
+    box-shadow: 0 0 20px #e74c3c, 0 0 30px #e74c3c;
+  }
+}

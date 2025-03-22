@@ -1,0 +1,40 @@
+<div class="container mt-5">
+  <div class="row justify-content-center">
+    <div class="col-md-6">
+      <div class="card shadow-lg border-0 rounded">
+        <div class="card-body" style="background-color: #F5DEB3;">
+          <div class="text-center mb-4">
+            <img src="assets/vjti-college-logo.png" alt="VJTI Logo" class="img-fluid" style="max-width: 100px; margin-bottom: 20px;">
+            <h2 class="font-weight-bold" style="color: #8B4513;">Login</h2>
+          </div>
+
+          <form (ngSubmit)="login()">
+            <div class="mb-3">
+              <label for="username" class="form-label" style="color: #8B4513;">Username</label>
+              <input type="text" class="form-control" id="username" [(ngModel)]="loginData.username" name="username" required style="border-color: #8B4513; border-radius: 5px;">
+            </div>
+
+            <div class="mb-3">
+              <label for="password" class="form-label" style="color: #8B4513;">Password</label>
+              <input type="password" class="form-control" id="password" [(ngModel)]="loginData.password" name="password" required style="border-color: #8B4513; border-radius: 5px;">
+            </div>
+
+            <div class="d-grid gap-2">
+              <button type="submit" class="btn" style="background-color: #8B4513; color: #F5DEB3; font-weight: bold;" (click)="login()">Login</button>
+            </div>
+          </form>
+
+          <!-- Not a user? Register link -->
+          <div class="text-center mt-3">
+            <p class="mb-0" style="color: #8B4513;">Not a user? <a routerLink="/register" class="text-primary">Register here</a></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<footer class="bg-dark text-white py-3 text-center">
+  <p class="mb-0">&copy; 2025 VJTI Mumbai - Complaint Management System</p>
+  <p class="mb-0">Developed as part of an academic project by VJTI students.</p>
+</footer>

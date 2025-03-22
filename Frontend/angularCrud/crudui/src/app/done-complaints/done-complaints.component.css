@@ -1,0 +1,76 @@
+/* General Container Styles */
+.container {
+    background-color: #fff8e1; /* Light yellow */
+    border-radius: 10px;
+    padding: 30px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Heading */
+  h2 {
+    color: #5d4037; /* Brown color for heading */
+    font-weight: bold; /* Bold heading */
+  }
+  
+  /* Table Styling */
+  .table {
+    background-color: #fff3e0; /* Light yellow background for table */
+    border: 1px solid #5d4037; /* Brown border for table */
+  }
+  
+  .table th, .table td {
+    color: #3e2723; /* Dark brown text color for table headers and cells */
+  }
+  
+  .table th {
+    background-color: #ffb300; /* Light brown background for headers */
+  }
+  
+  .table-striped tbody tr:nth-of-type(odd) {
+    background-color: #ffecb3; /* Light yellow for odd rows */
+  }
+  
+  .table-bordered {
+    border: 1px solid #5d4037; /* Dark brown border for table */
+  }
+  
+  .table-bordered th, .table-bordered td {
+    border: 1px solid #5d4037; /* Border color for table cells */
+  }
+  
+  /* Priority Box Styling */
+  .high-priority-box {
+    background-color: #ffb300; /* Light brown for high priority */
+    padding: 5px;
+    border-radius: 5px;
+  }
+  
+  .complain-id-box {
+    font-weight: bold;
+  }
+  
+  .priority-label {
+    background-color: #e65100; /* Darker brown for high priority label */
+    color: white;
+    font-weight: bold;
+    padding: 5px;
+    border-radius: 3px;
+    margin-top: 5px;
+    font-size: 12px;
+  }
+  
+  /* Image Styling */
+  img {
+    border-radius: 5px;
+  }
+  
+  /* Footer Styling */
+  footer {
+    background-color: #3e2723; /* Dark brown footer */
+    color: white;
+  }
+  
+  footer p {
+    font-size: 14px;
+  }
+  

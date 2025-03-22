@@ -1,0 +1,69 @@
+<div class="container product-container">
+  <!-- Priority Display (Only for High Priority) -->
+  <div class="priority-display" *ngIf="product?.priority === 'High'" 
+       [ngClass]="{'high-priority': product?.priority === 'High'}">
+    Priority: {{ product?.priority }}
+  </div>
+
+  <h2 class="text-center text-primary mb-4">Complain Details</h2>
+
+  <div class="product-wrapper" *ngIf="product">
+    <!-- Left Side: Product Image -->
+    <div class="product-image">
+      <img [src]="product.imageOfSubject" alt="Complain Image" class="img-fluid rounded shadow-lg">
+    </div>
+
+    <!-- Right Side: Product Details -->
+    <div class="product-details">
+      <div class="form-group">
+        <label><strong>Complain ID:</strong></label>
+        <p>{{ product.complainId }}</p>
+      </div>
+      <div class="form-group">
+        <label><strong>Complain Subject:</strong></label>
+        <p>{{ product.complainSubject }}</p>
+      </div>
+      <div class="form-group">
+        <label><strong>Complain Description:</strong></label>
+        <p>{{ product.complainDescription }}</p>
+      </div>
+      <div class="form-group">
+        <label><strong>Role of Complainer:</strong></label>
+        <p>{{ product.roleOfComplainer }}</p>
+      </div>
+      <div class="form-group">
+        <label><strong>Department:</strong></label>
+        <p>{{ product.dept }}</p>
+      </div>
+      <div class="form-group">
+        <label><strong>Room Number:</strong></label>
+        <p>{{ product.roomNo }}</p>
+      </div>
+      <div class="form-group">
+        <label><strong>Floor Number:</strong></label>
+        <p>{{ product.floorNo }}</p>
+      </div>
+      <div class="form-group">
+        <label><strong>Building:</strong></label>
+        <p>{{ product.building }}</p>
+      </div>
+      <div class="form-group">
+        <label><strong>Email:</strong></label>
+        <p>{{ product.email }}</p>
+      </div>
+      <div class="form-group">
+        <label><strong>Created Date:</strong></label>
+        <p>{{ product.createdDate }}</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="text-center mt-4">
+    <button class="btn btn-primary back-button glowing-button" (click)="gotolist()">Back</button>
+  </div>
+</div>
+
+<footer class="bg-dark text-white py-3 text-center">
+  <p class="mb-0">&copy; 2025 VJTI Mumbai - Complaint Management System</p>
+  <p class="mb-0">Developed as part of an academic project by VJTI students.</p>
+</footer>

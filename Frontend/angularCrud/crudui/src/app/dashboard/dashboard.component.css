@@ -1,0 +1,36 @@
+.container-fluid {
+    font-family: 'Arial', sans-serif;
+  }
+  
+  .card {
+    border-radius: 10px;
+  }
+  
+  h2 {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #090909;
+  }
+  
+  h4 {
+    font-size: 1.6rem;
+    font-weight: bold;
+  }
+  
+  footer {
+    font-size: 0.9rem;
+    letter-spacing: 0.5px;
+  }
+  
+  footer p {
+    margin: 0;
+  }
+  
+  .text-center img {
+    margin: 20px auto;
+  }
+  
+  .bg-light {
+    background-color: #F5F5DC !important;
+  }
+  

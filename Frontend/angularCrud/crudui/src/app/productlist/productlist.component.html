@@ -1,0 +1,126 @@
+<div class="container">
+  <!-- Banner Section -->
+  <div class="banner">
+    <h2>Complain List</h2>
+    <p>Take Actions Accordingly</p>
+  </div>
+
+  <!-- Raise New Complaint Button -->
+  <div class="text-right" style="margin-bottom: 20px;">
+    <button type="button" class="btn btn-new-complaint" (click)="goToAddProduct()">Raise New Complaint</button>
+  </div>
+
+  <!-- Search Section -->
+  <div class="search-section" style="margin-bottom: 20px; display: flex; gap: 10px;">
+    <!-- Dropdown for Search Criteria -->
+    <select class="form-control" [(ngModel)]="searchBy" style="width: 200px;">
+      <option value="id">Search by ID</option>
+      <option value="subject">Search by Category</option>
+      <option value="department">Search by Department</option>
+      <option value="building">Search by Building</option>
+    </select>
+
+    <!-- Search Bar -->
+    <input
+      type="text"
+      class="form-control"
+      placeholder="Enter search term"
+      [(ngModel)]="searchTerm"
+      (input)="filterComplaints()"
+      style="flex: 1;"
+    />
+  </div>
+
+  <!-- Complaints Table -->
+  <table class="table table-striped">
+    <thead class="table-header">
+      <tr>
+        <th>Complain Id</th>
+        <th>Image</th>
+        <th>Complain Category</th>
+        <th>From Department</th>
+        <th>Building</th>
+        <th>Complain Description</th>
+        <th>Status</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <tr *ngFor="let complaint of filteredProductList">
+        <!-- Display Complain Id with Priority -->
+        <td [ngClass]="{'priority-high': complaint.priority === 'High'}">
+          {{ complaint.complainId }} <br />
+          <span *ngIf="complaint.priority === 'High'" class="priority-text">
+            {{ complaint.priority }}
+          </span>
+        </td>
+        <td>
+          <img
+            [src]="complaint.imageOfSubject"
+            alt="Image"
+            class="img-thumbnail"
+            style="width: 100px; height: 100px;"
+          />
+          <span *ngIf="!complaint.imageOfSubject">No Image</span>
+        </td>
+        <td>{{ complaint.complainSubject }}</td>
+        <td>{{ complaint.dept }}</td>
+        <td>{{ complaint.building }}</td>
+        <td>{{ complaint.complainDescription }}</td>
+        <td>
+          <select
+            [(ngModel)]="complaint.status"
+            [ngClass]="{
+              'status-logged': complaint.status === 'Logged',
+              'status-assigned': complaint.status === 'Assigned',
+              'status-done': complaint.status === 'Done'
+            }"
+          >
+            <option value="Logged">Logged</option>
+            <option value="Assigned">Assigned</option>
+            <option value="Done">Done</option>
+          </select>
+          <button
+            type="button"
+            class="btn btn-save"
+            *ngIf="showProducts"
+            (click)="saveStatusChanges()"
+          >
+            Save Changes
+          </button>
+        </td>
+        <td class="action-buttons">
+          <div class="action-buttons-container">
+            <button
+              type="button"
+              class="btn btn-edit"
+              (click)="goToEditProduct(complaint.complainId)"
+            >
+              Edit
+            </button>
+            <button
+              type="button"
+              class="btn btn-view"
+              (click)="goToViewProduct(complaint.complainId)"
+            >
+              View
+            </button>
+            <button
+              type="button"
+              class="btn btn-delete"
+              (click)="deleteProduct(complaint.complainId)"
+            >
+              Delete
+            </button>
+          </div>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<footer class="bg-dark text-white py-3 text-center">
+  <p class="mb-0">&copy; 2025 VJTI Mumbai - Complaint Management System</p>
+  <p class="mb-0">Developed as part of an academic project by VJTI students.</p>
+</footer>
