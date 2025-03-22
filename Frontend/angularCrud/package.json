@@ -1,0 +1,5 @@
+{
+  "dependencies": {
+    "cosmiconfig": "^8.1.3"
+  }
+}
